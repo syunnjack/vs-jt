@@ -1,0 +1,11 @@
+{
+  "name": "SMOKA - 近くの喫煙スポット",
+  "short_name": "SMOKA",
+  "description": "登録不要で近くの喫煙スポットと混雑状況がわかる",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f5ee",
+  "theme_color": "#174f43",
+  "lang": "ja",
+  "icons": []
+}
