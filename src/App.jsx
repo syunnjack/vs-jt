@@ -52,7 +52,7 @@ function App() {
 
   return <div className="app-shell">
     <header className="topbar">
-      <button className="logo" onClick={() => setView('map')} aria-label="マップへ"><span>S</span>SMOKA</button>
+      <button className="logo" onClick={() => setView('map')} aria-label="マップへ"><span>ス</span>スグスウ</button>
       <div className="points"><small>MY POINTS</small><b>{points}<i>pt</i></b></div>
       <button className={`circle-button ${notified ? 'is-on' : ''}`} onClick={enableNotifications} aria-label="空き通知"><Icon name="bell" size={20}/></button>
     </header>

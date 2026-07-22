@@ -1,6 +1,6 @@
 {
-  "name": "SMOKA - 近くの喫煙スポット",
-  "short_name": "SMOKA",
+  "name": "スグスウ - 近くの喫煙スポット、すぐ見つかる。",
+  "short_name": "スグスウ",
   "description": "登録不要で近くの喫煙スポットと混雑状況がわかる",
   "start_url": "/",
   "display": "standalone",

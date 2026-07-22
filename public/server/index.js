@@ -1,6 +1,6 @@
 export default {
   async fetch(request, env) {
     if (env.ASSETS?.fetch) return env.ASSETS.fetch(request)
-    return new Response('SMOKA', { headers: { 'content-type': 'text/plain; charset=utf-8' } })
+    return new Response('スグスウ', { headers: { 'content-type': 'text/plain; charset=utf-8' } })
   },
 }
