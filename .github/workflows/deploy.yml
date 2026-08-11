@@ -17,10 +17,25 @@ jobs:
           node-version: '20'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build
         run: npm run build
+
+      - name: Validate deployment secrets
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
+        run: |
+          missing=()
+          [ -z "$SSH_HOST" ] && missing+=("SSH_HOST")
+          [ -z "$SSH_USERNAME" ] && missing+=("SSH_USERNAME")
+          [ -z "$SSH_PRIVATE_KEY" ] && missing+=("SSH_PRIVATE_KEY")
+          if [ ${#missing[@]} -gt 0 ]; then
+            echo "::error::Missing repository secrets: ${missing[*]}"
+            exit 1
+          fi
 
       - name: Deploy to Xserver via rsync
         env:

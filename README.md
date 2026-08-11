@@ -21,3 +21,22 @@ npm run dev
 - Supabase + PostGIS用の初期スキーマ
 
 本番接続時はMapboxまたはMapLibre、Supabase、Web Push送信API、画像Storageを環境変数経由で接続してください。
+
+## ビルドとLint
+
+```bash
+npm run lint
+npm run build
+```
+
+## GitHub Actionsデプロイ
+
+`main` / `master` への push で [ .github/workflows/deploy.yml ](.github/workflows/deploy.yml) が実行されます。
+
+事前に以下の Repository Secrets を設定してください。
+
+- SSH_HOST
+- SSH_USERNAME
+- SSH_PRIVATE_KEY
+
+デプロイ先は `sugusuu.jp/public_html` を想定しています。
